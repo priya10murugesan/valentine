@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Moments</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #ffeef7);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 3em;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(90deg, #0073ff, #8205cf, #ff8c00, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowPulse 3s infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      from { text-shadow: 0 0 15px rgba(255, 105, 180, 0.6); transform: scale(1); }
+      to   { text-shadow: 0 0 30px rgba(255, 20, 147, 0.9); transform: scale(1.05); }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      padding: 10px;
+    }
+
+    .photo-card {
+     perspective: 1000px; width: 100%;
+      aspect-ratio: 1 / 1; /* keeps square shape */
+    }
+
+    .photo-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .photo-card:hover .photo-inner {
+      transform: rotateY(180deg);
+    }
+
+    .photo-front, .photo-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .photo-front {
+      background: #fff0f5;
+      font-size: 2.5em;
+      color: #ff1493;
+    }
+
+    .photo-back {
+      background: #ffe4ec;
+      transform: rotateY(180deg);
+      flex-direction: column;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .photo-back img {
+      width: 100%;
+      height: 70%;          /* photo takes top portion */
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+
+    .photo-back p {
+      font-size: 1em;
+      color: #c71585;
+      font-style: italic;
+      margin: 0;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      color: rgba(255, 105, 180, 0.6);
+      animation: floatUp 8s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-110vh); opacity: 0; }
+    }
+
+    .next-button {
+      margin-top: 20px;
+    }
+
+    /* .love-link {
+      font-size: 1.2em;
+      text-decoration: none;
+      color: #ff1493;
+      background: #fff0f5;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .love-link:hover {
+      background: #ff69b4;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.6);
+    } */
+  </style>
+</head>
+<body>
+  <h1>Moments of Us</h1>
+  <div class="gallery">
+    <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">💖</div>
+        <div class="photo-back">
+          <img src="collegefav.jpeg" alt="Valentine Moment 1">
+          <p>"This moment is ours forever."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">🌹</div>
+        <div class="photo-back">
+          <img src="chennai.jpeg" alt="Valentine Moment 2">
+          <p>"Love makes every heartbeat timeless."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">✨</div>
+        <div class="photo-back">
+          <img src="kundrakudi.jpeg" alt="Valentine Moment 3">
+          <p>"Because you are my today and all my tomorrows."</p>
+        </div>
+      </div>
+    </div>
+     <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">✨</div>
+        <div class="photo-back">
+          <img src="kundrakudi.jpeg" alt="Valentine Moment 3">
+          <p>"Because you are my today and all my tomorrows."</p>
+        </div>
+      </div>
+    </div>
+     <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">✨</div>
+        <div class="photo-back">
+          <img src="kundrakudi.jpeg" alt="Valentine Moment 3">
+          <p>"Because you are my today and all my tomorrows."</p>
+        </div>
+      </div>
+    </div>
+     <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">✨</div>
+        <div class="photo-back">
+          <img src="kundrakudi.jpeg" alt="Valentine Moment 3">
+          <p>"Because you are my today and all my tomorrows."</p>
+        </div>
+      </div>
+    </div>
+     <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">✨</div>
+        <div class="photo-back">
+          <img src="kundrakudi.jpeg" alt="Valentine Moment 3">
+          <p>"Because you are my today and all my tomorrows."</p>
+        </div>
+      </div>
+    </div>
+     <div class="photo-card">
+      <div class="photo-inner">
+        <div class="photo-front">✨</div>
+        <div class="photo-back">
+          <img src="kundrakudi.jpeg" alt="Valentine Moment 3">
+          <p>"Because you are my today and all my tomorrows."</p>
+        </div>
+      </div>
+    </div>
+    <!-- Add more cards here -->
+  </div>
+
+  <div class="next-button">
+    <a href="photopage.html" class="love-link">💖 Continue the Journey ✨</a>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      // Floating hearts
+      setInterval(function () {
+        var heart = $("<div class='heart'>❤</div>");
+        heart.css({
+          left: Math.random() * $(window).width(),
+          fontSize: (Math.random() * 20 + 15) + "px",
+          animationDuration: (Math.random() * 5 + 5) + "s"
+        });
+        $("body").append(heart);
+        setTimeout(function () { heart.remove(); }, 8000);
+      }, 800);
+    });
+  </script>
+</body>
+</html>
