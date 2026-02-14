@@ -329,11 +329,12 @@ body {
 }
 /* Floating butterflies */
 .butterfly {
-    position: absolute;
+   position: fixed;
     bottom: -50px;
     font-size: 26px;
     animation: flyUp 8s linear infinite;
     opacity: 0.9;
+    /* z-index: 999; */
 }
 
 @keyframes flyUp {
